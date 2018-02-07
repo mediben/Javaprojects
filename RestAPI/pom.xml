@@ -4,9 +4,9 @@
 	<groupId>mbt.project</groupId>
 	<artifactId>RestAPI</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>RestAPI Maven Webapp</name>
-	<url>http://maven.apache.org</url>
+	<version>0.0.1</version>
+	<name>Disciplinedapproach Rest API</name>
+	<url>https://github.com/mediben</url>
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
