@@ -6,14 +6,14 @@ import java.sql.SQLException;
 
 public class Connect {
 	/*
-	 *	@URL = your database server
+	 *  @URL = your database server
 	 *  @user = your username to access DB
 	 *  @password = your password to access DB
 	 *  @driver = if you are not using Mysql please update the driver with the adquent driver
 	 */
-	static final String URL = "jdbc:mysql://alice-db1:3306/sikkerhedsstyrelsen";
-	static final String user = "sik_user";
-	static final String password = "Sikkerhedsstyrelsen2017";
+	static final String URL = "";
+	static final String user = "";
+	static final String password = "";
 	static final String driver = "com.mysql.jdbc.Driver";
 	
 	/*
