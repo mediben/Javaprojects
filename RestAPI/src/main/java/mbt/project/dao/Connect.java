@@ -6,13 +6,18 @@ import java.sql.SQLException;
 
 public class Connect {
 	/*
-	 *	@URL = your database server
+	 *  @URL = your database server
 	 *  @user = your username to access DB
 	 *  @password = your password to access DB
 	 *  @driver = if you are not using Mysql please update the driver with the adquent driver
 	 */
+<<<<<<< HEAD
 	static final String URL = "jdbc:mysql://localhost:3306/disciplinedapproach";
 	static final String user = "root";
+=======
+	static final String URL = "";
+	static final String user = "";
+>>>>>>> b79699206bcef839510ea79eddf6f67aa5ec606a
 	static final String password = "";
 	static final String driver = "com.mysql.jdbc.Driver";
 	
