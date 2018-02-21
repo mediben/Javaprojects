@@ -11,23 +11,34 @@ public class Connect {
 	 *  @password = your password to access DB
 	 *  @driver = if you are not using Mysql please update the driver with the adquent driver
 	 */
-	static final String URL = "jdbc:mysql://alice-db1:3306/sikkerhedsstyrelsen";
-	static final String user = "sik_user";
-	static final String password = "Sikkerhedsstyrelsen2017";
+	static final String URL = "jdbc:mysql://localhost:3306/disciplinedapproach";
+	static final String user = "root";
+	static final String password = "";
 	static final String driver = "com.mysql.jdbc.Driver";
 	
+	Connection con = null;
 	/*
 	 * Call to connect to the DB
 	 */
-	public Connection getConnection() throws SQLException {
-		Connection con = null;
+	public Connection getConnection() {
+		
 		try {
 			Class.forName(driver);
 			con = DriverManager.getConnection(URL, user, password);
 		} catch (ClassNotFoundException e) {
 			System.out.println("Cannot establish conenction to DB ! \n " + e.getMessage());
 			System.exit(-1);
+		} catch (SQLException e) {
+			e.printStackTrace();
 		}
 		return con;
 	}
+	
+	  public void closeConnection() {
+	    try {
+	    	con	.close();
+	    } catch (SQLException e) {
+	      e.printStackTrace();
+	    }
+	  }
 }

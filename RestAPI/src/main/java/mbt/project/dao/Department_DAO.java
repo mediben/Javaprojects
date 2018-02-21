@@ -1,5 +1,3 @@
 package mbt.project.dao;
 
-public class Department_DAO {
-
-}
+public class Department_DAO {}

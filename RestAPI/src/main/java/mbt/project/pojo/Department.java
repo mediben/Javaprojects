@@ -2,29 +2,37 @@ package mbt.project.pojo;
 
 import java.util.List;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /*
  *	 @author : Mehdi Ben Taarit
  */
 
+@Entity
+@Table(name="department")
 public class Department {
-
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "id")
+	private int id;
+	@Column(name = "name")
 	private String name;
-	private Employee supervisor;
+	
+	
 	private List<Employee> employees;
 	
-	public Department(String name, Employee supervisor, int employeesNumber, List<Employee> employees) {
+	public Department(String name, List<Employee> employees) {
 		super();
 		this.name = name;
-		this.supervisor = supervisor;
 		this.employees = employees;
 	}
 	
-	public Employee getSupervisor() {
-		return supervisor;
-	}
-	public void setSupervisor(Employee supervisor) {
-		this.supervisor = supervisor;
-	}
+
 	public List<Employee> getEmployees() {
 		return employees;
 	}
@@ -46,6 +54,6 @@ public class Department {
 
 	@Override
 	public String toString() {
-		return "Department [name=" + name + ", supervisor=" + supervisor + ", employees=" + employees + "]";
+		return "Department [name=" + name + ", employees=" + employees + "]";
 	}
 }
